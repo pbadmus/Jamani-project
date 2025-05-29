@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Video Tributes - Jamiu Akanbi Yaya-Badmus's 60th Birthday{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient">
+    <div class="container">
+        <div class="video-gallery-page">
+            <div class="page-header">
+                <h1 class="page-title">Video Tributes</h1>
+                <p class="page-subtitle">Watch heartfelt messages from friends and family celebrating Jamiu's special day</p>
+                <div class="header-actions">
+                    <a href="{% url 'birthday_app:home' %}" class="btn btn-secondary">← Back to Celebration</a>
+                    <a href="{% url 'birthday_app:upload_video' %}" class="btn btn-primary">Share Your Video</a>
+                </div>
+            </div>
+
+            {% if video_tributes %}
+            <div class="video-gallery-grid">
+                {% for video in video_tributes %}
+                <div class="video-gallery-item">
+                    <div class="video-container">
+                        <video controls class="video-player" preload="metadata">
+                            <source src="{{ video.video_file.url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-details">
+                        <h3 class="video-contributor">{{ video.contributor_name }}</h3>
+                        <p class="video-relationship">{{ video.relationship }}</p>
+                        {% if video.message %}
+                        <p class="video-message">{{ video.message }}</p>
+                        {% endif %}
+                        <p class="video-date">{{ video.created_at|date:"F j, Y" }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-state">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="empty-icon">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+                <h2 class="empty-title">No Video Tributes Yet</h2>
+                <p class="empty-text">Be the first to share a video tribute for Jamiu's 60th birthday celebration!</p>
+                <a href="{% url 'birthday_app:upload_video' %}" class="btn btn-primary">Upload Video Tribute</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.video-gallery-page {
+    padding: 2rem 0;
+    min-height: calc(100vh - 4rem);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.video-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .video-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .video-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.video-gallery-item {
+    background: var(--white);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.video-gallery-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.video-details {
+    padding: 1.5rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.empty-icon {
+    color: var(--amber-400);
+    margin-bottom: 2rem;
+}
+
+.empty-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--amber-800);
+    margin-bottom: 1rem;
+}
+
+.empty-text {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+</style>
+{% endblock %}
+{% endblock %}

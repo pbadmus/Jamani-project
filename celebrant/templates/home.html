@@ -1,0 +1,633 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Celebrating a Diamond Jubilee</h1>
+            <p class="header-subtitle">Join us in honoring Jamiu Akanbi Yaya's 60th Birthday</p>
+            <div class="wave-pattern"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Celebrant's Picture -->
+    <section class="section">
+        <div class="container flex-container">
+            <div class="hero-image-container">
+                <div class="hero-image">
+                    <img src="{% static 'images/john-smith-profile.jpg' %}" alt="Jamiu Yaya" class="profile-image">
+                </div>
+            </div>
+            <div class="hero-content">
+                <h2 class="hero-title">Jamiu Akanbi Yaya-Badmus</h2>
+                <p class="hero-date">July 31, 1965 - Present</p>
+                <p class="hero-bio">
+                    On the 2nd of August, 2025, we joyfully celebrate the remarkable life and achievements of Yaya-Badmus Akanbi Jamu — a visionary, leader, and family man whose journey has inspired many across borders.
+                </p>
+                <div class="hero-buttons">
+                    <a href="{% url 'birthday_app:rsvp' %}" class="btn btn-primary">RSVP Now</a>
+                    <a href="{% url 'birthday_app:upload_video' %}" class="btn btn-secondary">Share a Video</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">Biography</h2>
+
+            <div class="tabs">
+                <div class="tabs-header">
+                    <button class="tab-button active" data-tab="early">Early Years</button>
+                    <button class="tab-button" data-tab="career">Career</button>
+                    <button class="tab-button" data-tab="present">Present Day</button>
+                </div>
+
+                <div id="early-tab" class="tab-content active">
+                    <div class="flex-container">
+                        <div class="bio-image-container">
+                            <img src="{% static 'images/john-early-years.jpg' %}" alt="Jamiu's early years" class="bio-image">
+                        </div>
+                        <div class="bio-content">
+                            <p class="mb-4">
+                               Born in Iperu-Remo in 1965, into the family of Salami and Yaya-Badmus, his early life was rooted in discipline, ambition, and strong cultural values. 
+                            </p>
+                            <p class="mb-4">
+                                He began his educational journey at Ans-Undeen Primary School, continued at Ojota Secondary School (formerly Nigeria College), and later completed his secondary education at Christ Apostolic Secondary School, Iperu-Remo. He was the first commercial student given the role of Head Boy of his high school due to his intellect and leadership skills.
+                            </p>
+                            <p>
+                               His academic pursuit led him to Ilaro Polytechnic, where he further honed his skills and drive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="career-tab" class="tab-content">
+                    <div class="flex-container">
+                        <div class="bio-image-container">
+                            <img src="{% static 'images/john-career.jpg' %}" alt="Jamiu's career" class="bio-image">
+                        </div>
+                        <div class="bio-content">
+                            <p class="mb-4">
+                                His professional career began at Eko Hotel Holiday Inn, where he served as Room Service Assistant Manager. It was here that he discovered a vision that would propel him toward global experiences and entrepreneurial pursuits.
+                            </p>
+                            <p class="mb-4">
+                                With an adventurous spirit and unwavering determination, Yaya-Badmus embarked on a journey that took him across various countries including Italy, Malta, Libya, the UAE, Germany, Saudi Arabia, and more. Each stop enriched his worldview and fueled his passion for business and innovation.
+                            </p>
+                            <p>
+                                In the early 2000s, he set his sights on Ghana, determined to build a legacy in real estate. He migrated to Accra with a clear mission — and today, that vision stands tall. He is the proud CEO of Royal Jama Real Estate, a successful company that continues to grow and make impact in the Ghanaian property market.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="present-tab" class="tab-content">
+                    <div class="flex-container">
+                        <div class="bio-image-container">
+                            <img src="{% static 'images/john-present.jpg' %}" alt="Jamiu today" class="bio-image">
+                        </div>
+                        <div class="bio-content">
+                            <p class="mb-4">
+                                Beyond his business success, Yaya-Badmus is deeply rooted in culture and tradition. He holds respected chieftaincy titles, including the Agbakin of Idena-Kingdom, a testament to his leadership and contributions to his community.
+                            </p>
+                            <p class="mb-4">
+                                Beyond his business success, Yaya-Badmus is deeply rooted in culture and tradition. He holds respected <b>chieftaincy titles</b>, including the <b>Agbakin of Idena-Kingdom</b>, a testament to his leadership and contributions to his community.
+                            </p>
+                            <p>
+                                His greatest joy comes from spending time with his family and imparting his wisdom and
+                                experiences to the next generation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Family</h2>
+
+            <div class="family-carousel-container">
+                <button class="carousel-arrow carousel-prev">
+                    <span class="arrow-icon">&#10094;</span>
+                </button>
+
+                <div class="family-carousel">
+                    <div class="family-card">
+                        <div class="family-image-container">
+                            <img src="{% static 'images/mary-smith.jpg' %}" alt="Grace Yaya" class="family-image">
+                        </div>
+                        <h3 class="family-name">Grace Yaya-Badmus</h3>
+                        <p class="family-relation">Wife</p>
+                        <p class="family-years">Married for 25 years</p>
+                    </div>
+
+                    <div class="family-card">
+                        <div class="family-image-container">
+                            <img src="{% static 'images/michael-smith.jpg' %}" alt="Patrick Badmus" class="family-image">
+                        </div>
+                        <h3 class="family-name">Patrick Badmus-Yaya</h3>
+                        <p class="family-relation">Son</p>
+                        <p class="family-years">24 years old</p>
+                    </div>
+
+                    <div class="family-card">
+                        <div class="family-image-container">
+                            <img src="{% static 'images/jennifer-davis.jpg' %}" alt="Folashade" class="family-image">
+                        </div>
+                        <h3 class="family-name">Folashade  Badmus-Yaya</h3>
+                        <p class="family-relation">Daughter</p>
+                        <p class="family-years">18 years old</p>
+                    </div>
+
+                    <div class="family-card">
+                        <div class="family-image-container">
+                            <img src="{% static 'images/robert-smith.jpg' %}" alt="Emmanuella" class="family-image">
+                        </div>
+                        <h3 class="family-name">Emmanuella Badmus-Yaya</h3>
+                        <p class="family-relation">Daughter</p>
+                        <p class="family-years">15 years old</p>
+                    </div>
+
+                    <div class="family-card">
+                        <div class="family-image-container">
+                            <img src="{% static 'images/robert-smith.jpg' %}" alt="Emmanuel" class="family-image">
+                        </div>
+                        <h3 class="family-name">Emmanuel Badmus-Yaya</h3>
+                        <p class="family-relation">Son</p>
+                        <p class="family-years">15 years old</p>
+                    </div>
+
+                    <div class="family-card">
+                        <div class="family-image-container">
+                            <img src="{% static 'images/grandchildren.jpg' %}" alt="The Grandchildren" class="family-image">
+                        </div>
+                        <h3 class="family-name">The Grandchildren</h3>
+                        <p class="family-relation">Joy of his life</p>
+                        <p class="family-years">Ages 3-12</p>
+                    </div>
+                </div>
+
+                <button class="carousel-arrow carousel-next">
+                    <span class="arrow-icon">&#10095;</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">Memories Through the Years</h2>
+            <p class="gallery-intro">
+                A visual journey through six decades of cherished moments, milestones, and memories that have shaped John's
+                incredible life story.
+            </p>
+
+            <div class="gallery-tabs">
+                <div class="gallery-tabs-header">
+                    <button class="gallery-tab-button active" data-tab="1960s-1970s">1960s-70s</button>
+                    <button class="gallery-tab-button" data-tab="1980s">1980s</button>
+                    <button class="gallery-tab-button" data-tab="1990s">1990s</button>
+                    <button class="gallery-tab-button" data-tab="2000s">2000s</button>
+                    <button class="gallery-tab-button" data-tab="2010s">2010s</button>
+                    <button class="gallery-tab-button" data-tab="2020s">2020s</button>
+                </div>
+
+                <div id="1960s-1970s-gallery" class="gallery-tab-content active">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/baby-john-1964.jpg' %}" alt="Baby Jamiu, 1965" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">Baby Jamiu, 1965</p>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/first-steps-1965.jpg' %}" alt="First steps, 1966" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">First steps, 1966</p>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/school-days-1970.jpg' %}" alt="School days, 1970" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">First day of school, 1970</p>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/family-vacation-1975.jpg' %}" alt="Family vacation, 1975" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">Family vacation, 1975</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="1980s-gallery" class="gallery-tab-content">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/high-school-graduation-1982.jpg' %}" alt="High school graduation" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">High school graduation, 1982</p>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/college-days-1983.jpg' %}" alt="College days" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">College freshman year, 1982</p>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/meeting-mary-1983.jpg' %}" alt="Meeting Mary" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">Meeting Grace, 1998</p>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/wedding-day-1989.jpg' %}" alt="Wedding day" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">Wedding day, 2000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue with other decades... -->
+                <div id="1990s-gallery" class="gallery-tab-content">
+                    <div class="gallery-grid">
+                        <!-- Add more 1990s photos here -->
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery/honeymoon-1989.jpg' %}" alt="Honeymoon" class="gallery-image">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 9h6v6h-6z"></path>
+                                            <path d="M21 15V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="gallery-caption">Honeymoon in Libya, 2001</p>
+                        </div>
+                        <!-- Add more photos as needed -->
+                    </div>
+                </div>
+
+                <div id="2000s-gallery" class="gallery-tab-content">
+                    <div class="gallery-grid">
+                        <!-- Add 2000s photos here -->
+                    </div>
+                </div>
+
+                <div id="2010s-gallery" class="gallery-tab-content">
+                    <div class="gallery-grid">
+                        <!-- Add 2010s photos here -->
+                    </div>
+                </div>
+
+                <div id="2020s-gallery" class="gallery-tab-content">
+                    <div class="gallery-grid">
+                        <!-- Add 2020s photos here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modal-image" src="/placeholder.svg" alt="" class="modal-image">
+            <div class="modal-caption-container">
+                <p id="modal-caption" class="modal-caption"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Information -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Celebrating a Life Well Lived</h2>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3 class="info-title">Achievements</h3>
+                    <ul class="info-list">
+                        <li>Distinguished Career Award, 2015</li>
+                        <li>Community Service Recognition, 2018</li>
+                        <li>Mentor of the Year, 2019</li>
+                        <li>Business Tycoon of the Year, 2019</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="info-title">Hobbies & Interests</h3>
+                    <ul class="info-list">
+                        <li>Family Party - Hosting of elegant parties</li>
+                        <li>Traveling - Sightseeing</li>
+                        <li>Football - A chelsea lover to the core</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="info-title">Life Philosophy</h3>
+                    <blockquote class="philosophy-quote">
+                        "Life isn't about finding yourself, it's about creating yourself. Every day is an opportunity to learn,
+                        grow, and make a difference in someone else's life. <b>No Retreat, No surrender</b>"
+                    </blockquote>
+                    <p class="philosophy-attribution">- Jamiu Yaya-Badmus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Video Tributes Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Video Tributes</h2>
+            <p class="video-intro">Friends and family share their memories and birthday wishes for Jamiu.</p>
+
+            {% if video_tributes %}
+            <div class="video-carousel-container">
+                <button class="carousel-arrow carousel-prev" data-carousel="video">
+                    <span class="arrow-icon">&#10094;</span>
+                </button>
+
+                <div class="video-carousel" id="video-carousel">
+                    {% for video in video_tributes %}
+                    <div class="video-tribute-card">
+                        <div class="video-container">
+                            <video controls class="video-player" preload="metadata">
+                                <source src="{{ video.video_file.url }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <div class="play-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-contributor">{{ video.contributor_name }}</h3>
+                            <p class="video-relationship">{{ video.relationship }}</p>
+                            {% if video.message %}
+                            <p class="video-message">{{ video.message|truncatewords:15 }}</p>
+                            {% endif %}
+                            <p class="video-date">{{ video.created_at|date:"M j, Y" }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <button class="carousel-arrow carousel-next" data-carousel="video">
+                    <span class="arrow-icon">&#10095;</span>
+                </button>
+            </div>
+            
+            <div class="video-actions">
+                <a href="{% url 'birthday_app:video_gallery' %}" class="btn btn-secondary">View All Videos</a>
+                <a href="{% url 'birthday_app:upload_video' %}" class="btn btn-primary">Share Your Video</a>
+            </div>
+            {% else %}
+            <div class="video-placeholder-section">
+                <div class="video-placeholder-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="placeholder-icon">
+                        <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                    </svg>
+                    <h3 class="placeholder-title">No Video Tributes Yet</h3>
+                    <p class="placeholder-text">Be the first to share a video tribute for Jamiu's special day!</p>
+                    <a href="{% url 'birthday_app:upload_video' %}" class="btn btn-primary">Upload Video Tribute</a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <h2 class="footer-title">Join Us In Celebration</h2>
+            <p class="footer-event-details">
+                Saturday, August 2, 2025 • 10:00 AM • Grand Ballroom, City Hotel
+            </p>
+            <div class="footer-buttons">
+                <a href="{% url 'birthday_app:rsvp' %}" class="btn btn-primary">RSVP Now</a>
+                <a href="{% url 'birthday_app:upload_video'%}" class="btn btn-outline">Share a Video</a>
+            </div>
+
+            <div class="footer-copyright">
+                <p>© 2024 Jamiu Akanbi Yaya's 60th Birthday Celebration</p>
+            </div>
+        </div>
+    </footer>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Biography tabs
+        const tabButtons = document.querySelectorAll('.tab-button');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(this.dataset.tab + '-tab').classList.add('active');
+            });
+        });
+
+        // Gallery tabs
+        const galleryTabButtons = document.querySelectorAll('.gallery-tab-button');
+        galleryTabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons and contents
+                galleryTabButtons.forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.gallery-tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(this.dataset.tab + '-gallery').classList.add('active');
+            });
+        });
+
+        // Family carousel
+        const carousel = document.querySelector('.family-carousel');
+        const prevButton = document.querySelector('.carousel-prev');
+        const nextButton = document.querySelector('.carousel-next');
+        
+        if (prevButton && nextButton && carousel) {
+            prevButton.addEventListener('click', function() {
+                carousel.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+            
+            nextButton.addEventListener('click', function() {
+                carousel.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+        }
+
+        // Carousel functionality
+    const carouselButtons = document.querySelectorAll('.carousel-arrow');
+    carouselButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const carouselType = this.dataset.carousel;
+            const carousel = document.getElementById(carouselType + '-carousel');
+            const scrollAmount = 320; // Width of card + gap
+            
+            if (this.classList.contains('carousel-prev')) {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Video play functionality
+    const videoCards = document.querySelectorAll('.video-tribute-card');
+    videoCards.forEach(card => {
+        const video = card.querySelector('video');
+        const overlay = card.querySelector('.video-overlay');
+        
+        if (video && overlay) {
+            overlay.addEventListener('click', function() {
+                if (video.paused) {
+                    video.play();
+                    overlay.style.display = 'none';
+                } else {
+                    video.pause();
+                    overlay.style.display = 'flex';
+                }
+            });
+            
+            video.addEventListener('click', function() {
+                if (video.paused) {
+                    video.play();
+                    overlay.style.display = 'none';
+                } else {
+                    video.pause();
+                    overlay.style.display = 'flex';
+                }
+            });
+            
+            video.addEventListener('ended', function() {
+                overlay.style.display = 'flex';
+            });
+        }
+    });
+        // Photo modal
+        const modal = document.getElementById('photo-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalCaption = document.getElementById('modal-caption');
+        const closeButton = document.querySelector('.modal-close');
+        
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.querySelector('.gallery-image').src;
+                const caption = this.querySelector('.gallery-caption').textContent;
+                
+                modalImage.src = imgSrc;
+                modalCaption.textContent = caption;
+                modal.style.display = 'flex';
+            });
+        });
+        
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+        }
+        
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
+{% endblock %}
