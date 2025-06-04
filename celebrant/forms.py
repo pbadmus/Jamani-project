@@ -91,7 +91,7 @@ class RSVPForm(forms.ModelForm):
             'message': forms.Textarea(attrs={
                 'class': 'form-control',
                 'rows': 4,
-                'placeholder': 'Share a birthday message or memory for John...'
+                'placeholder': 'Share a birthday message or memory for Jamiu...'
             }),
             'relationship': forms.TextInput(attrs={
                 'class': 'form-control',

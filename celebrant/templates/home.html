@@ -17,14 +17,14 @@
         <div class="container flex-container">
             <div class="hero-image-container">
                 <div class="hero-image">
-                    <img src="{% static 'images/john-smith-profile.jpg' %}" alt="Jamiu Yaya" class="profile-image">
+                    <img src="{% static 'images/profile-pic.jpg' %}" alt="Jamiu Yaya" class="profile-image">
                 </div>
             </div>
             <div class="hero-content">
                 <h2 class="hero-title">Jamiu Akanbi Yaya-Badmus</h2>
                 <p class="hero-date">July 31, 1965 - Present</p>
                 <p class="hero-bio">
-                    On the 2nd of August, 2025, we joyfully celebrate the remarkable life and achievements of Yaya-Badmus Akanbi Jamu — a visionary, leader, and family man whose journey has inspired many across borders.
+                    On the 2nd of August, 2025, we joyfully celebrate the remarkable life and achievements of Yaya-Badmus Akanbi Jamiu — a visionary, leader, and family man whose journey has inspired many across borders.
                 </p>
                 <div class="hero-buttons">
                     <a href="{% url 'birthday_app:rsvp' %}" class="btn btn-primary">RSVP Now</a>
@@ -49,7 +49,7 @@
                 <div id="early-tab" class="tab-content active">
                     <div class="flex-container">
                         <div class="bio-image-container">
-                            <img src="{% static 'images/john-early-years.jpg' %}" alt="Jamiu's early years" class="bio-image">
+                            <img src="{% static 'images/early-pic.jpg' %}" alt="Jamiu's early years" class="bio-image">
                         </div>
                         <div class="bio-content">
                             <p class="mb-4">
@@ -68,7 +68,7 @@
                 <div id="career-tab" class="tab-content">
                     <div class="flex-container">
                         <div class="bio-image-container">
-                            <img src="{% static 'images/john-career.jpg' %}" alt="Jamiu's career" class="bio-image">
+                            <img src="{% static 'images/career.jpg' %}" alt="Jamiu's career" class="bio-image">
                         </div>
                         <div class="bio-content">
                             <p class="mb-4">
@@ -87,7 +87,7 @@
                 <div id="present-tab" class="tab-content">
                     <div class="flex-container">
                         <div class="bio-image-container">
-                            <img src="{% static 'images/john-present.jpg' %}" alt="Jamiu today" class="bio-image">
+                            <img src="{% static 'images/recent.jpg' %}" alt="Jamiu today" class="bio-image">
                         </div>
                         <div class="bio-content">
                             <p class="mb-4">
@@ -107,7 +107,7 @@
         </div>
     </section>
 
-    <!-- Family Section -->
+    {% comment %} <!-- Family Section -->
     <section class="section bg-light">
         <div class="container">
             <h2 class="section-title">Family</h2>
@@ -178,32 +178,32 @@
                 </button>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
 
     <!-- Photo Gallery Section -->
     <section class="section bg-white">
         <div class="container">
             <h2 class="section-title">Memories Through the Years</h2>
             <p class="gallery-intro">
-                A visual journey through six decades of cherished moments, milestones, and memories that have shaped John's
+                A visual journey through cherished moments, milestones, and memories that have shaped Jamiu's
                 incredible life story.
             </p>
 
             <div class="gallery-tabs">
                 <div class="gallery-tabs-header">
-                    <button class="gallery-tab-button active" data-tab="1960s-1970s">1960s-70s</button>
-                    <button class="gallery-tab-button" data-tab="1980s">1980s</button>
-                    <button class="gallery-tab-button" data-tab="1990s">1990s</button>
-                    <button class="gallery-tab-button" data-tab="2000s">2000s</button>
+                    <button class="gallery-tab-button active" data-tab="1960s-1970s">2010s</button>
+                    <button class="gallery-tab-button" data-tab="1980s">2020s</button>
+                    {% comment %} <button class="gallery-tab-button" data-tab="1990s">Family</button> {% endcomment %}
+                    {% comment %} <button class="gallery-tab-button" data-tab="2000s">2000s</button>
                     <button class="gallery-tab-button" data-tab="2010s">2010s</button>
-                    <button class="gallery-tab-button" data-tab="2020s">2020s</button>
+                    <button class="gallery-tab-button" data-tab="2020s">2020s</button> {% endcomment %}
                 </div>
 
                 <div id="1960s-1970s-gallery" class="gallery-tab-content active">
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <div class="gallery-image-container">
-                                <img src="{% static 'images/gallery/baby-john-1964.jpg' %}" alt="Baby Jamiu, 1965" class="gallery-image">
+                                <img src="{% static 'images/2010s/early-pic.jpg' %}" alt="Baby Jamiu, 1965" class="gallery-image">
                                 <div class="gallery-overlay">
                                     <div class="gallery-zoom-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -213,12 +213,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">Baby Jamiu, 1965</p>
+                            <p class="gallery-caption">Jamiu with Mom, Owanbe</p>
                         </div>
 
                         <div class="gallery-item">
                             <div class="gallery-image-container">
-                                <img src="{% static 'images/gallery/first-steps-1965.jpg' %}" alt="First steps, 1966" class="gallery-image">
+                                <img src="{% static 'images/2010s/early-years.jpg' %}" alt="First steps, 1966" class="gallery-image">
                                 <div class="gallery-overlay">
                                     <div class="gallery-zoom-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -228,12 +228,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">First steps, 1966</p>
+                            <p class="gallery-caption">Mr. Celebrant</p>
                         </div>
 
                         <div class="gallery-item">
                             <div class="gallery-image-container">
-                                <img src="{% static 'images/gallery/school-days-1970.jpg' %}" alt="School days, 1970" class="gallery-image">
+                                <img src="{% static 'images/2010s/early2.jpg' %}" alt="School days, 1970" class="gallery-image">
                                 <div class="gallery-overlay">
                                     <div class="gallery-zoom-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -243,12 +243,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">First day of school, 1970</p>
+                            <p class="gallery-caption">Sunday vibes</p>
                         </div>
 
                         <div class="gallery-item">
                             <div class="gallery-image-container">
-                                <img src="{% static 'images/gallery/family-vacation-1975.jpg' %}" alt="Family vacation, 1975" class="gallery-image">
+                                <img src="{% static 'images/2010s/early3.jpg' %}" alt="Family vacation, 1975" class="gallery-image">
                                 <div class="gallery-overlay">
                                     <div class="gallery-zoom-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -258,7 +258,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">Family vacation, 1975</p>
+                            <p class="gallery-caption">Mr.T's Marriage</p>
                         </div>
                     </div>
                 </div>
@@ -267,7 +267,7 @@
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <div class="gallery-image-container">
-                                <img src="{% static 'images/gallery/high-school-graduation-1982.jpg' %}" alt="High school graduation" class="gallery-image">
+                                <img src="{% static 'images/2020s/first.jpeg' %}" alt="jamani" class="gallery-image">
                                 <div class="gallery-overlay">
                                     <div class="gallery-zoom-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -277,12 +277,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">High school graduation, 1982</p>
+                            <p class="gallery-caption"></p>
                         </div>
 
                         <div class="gallery-item">
                             <div class="gallery-image-container">
-                                <img src="{% static 'images/gallery/college-days-1983.jpg' %}" alt="College days" class="gallery-image">
+                                <img src="{% static 'images/2020s/2.jpeg' %}" alt="College days" class="gallery-image">
                                 <div class="gallery-overlay">
                                     <div class="gallery-zoom-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -292,12 +292,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">College freshman year, 1982</p>
+                            <p class="gallery-caption"></p>
                         </div>
 
                         <div class="gallery-item">
                             <div class="gallery-image-container">
-                                <img src="{% static 'images/gallery/meeting-mary-1983.jpg' %}" alt="Meeting Mary" class="gallery-image">
+                                <img src="{% static 'images/2020s/4.jpg' %}" alt="Jamani" class="gallery-image">
                                 <div class="gallery-overlay">
                                     <div class="gallery-zoom-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -307,12 +307,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">Meeting Grace, 1998</p>
+                            <p class="gallery-caption"></p>
                         </div>
 
                         <div class="gallery-item">
                             <div class="gallery-image-container">
-                                <img src="{% static 'images/gallery/wedding-day-1989.jpg' %}" alt="Wedding day" class="gallery-image">
+                                <img src="{% static 'images/2020s/6.jpeg' %}" alt="Jamani" class="gallery-image">
                                 <div class="gallery-overlay">
                                     <div class="gallery-zoom-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -322,7 +322,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">Wedding day, 2000</p>
+                            <p class="gallery-caption"></p>
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@
                 <!-- Continue with other decades... -->
                 <div id="1990s-gallery" class="gallery-tab-content">
                     <div class="gallery-grid">
-                        <!-- Add more 1990s photos here -->
+                       
                         <div class="gallery-item">
                             <div class="gallery-image-container">
                                 <img src="{% static 'images/gallery/honeymoon-1989.jpg' %}" alt="Honeymoon" class="gallery-image">
@@ -343,7 +343,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="gallery-caption">Honeymoon in Libya, 2001</p>
+                            <p class="gallery-caption"></p>
                         </div>
                         <!-- Add more photos as needed -->
                     </div>
@@ -491,7 +491,7 @@
         <div class="container text-center">
             <h2 class="footer-title">Join Us In Celebration</h2>
             <p class="footer-event-details">
-                Saturday, August 2, 2025 • 10:00 AM • Grand Ballroom, City Hotel
+                Saturday, August 2, 2025 • 10:00 AM • Caritas Events Center
             </p>
             <div class="footer-buttons">
                 <a href="{% url 'birthday_app:rsvp' %}" class="btn btn-primary">RSVP Now</a>
