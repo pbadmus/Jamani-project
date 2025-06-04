@@ -231,7 +231,7 @@ WSGI_APPLICATION = "birthday_project.wsgi.application"
 if config('DATABASE_URL', default=None):
     # Production database (PostgreSQL on Render)
     DATABASES = {
-        'default': dj_database_url.parse(config('DATABASE_URL'))
+        'default': dj_database_url.parse('postgresql://jamani_birthday_user:lNGgjALK5qy1fHt56PWyVkvITwKdHr7L@dpg-d0umlfemcj7s739voe3g-a.oregon-postgres.render.com/jamani_birthday')
     }
 else:
     # Development database (SQLite)
