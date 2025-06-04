@@ -12,11 +12,11 @@ from celebrant.models import RSVP, VideoTribute
 def home_page(request):
     """Homepage with static content and approved videos"""
     # Get approved video tributes for display
-    # video_tributes = VideoTribute.objects.filter(is_approved=True).order_by('-created_at')[:6]
+    video_tributes = VideoTribute.objects.filter(is_approved=True).order_by('-created_at')[:6]
     
-    # context = {
-    #     'video_tributes': video_tributes,
-    # }
+    context = {
+        'video_tributes': video_tributes,
+    }
     return render(request, 'home.html', )
     
 
