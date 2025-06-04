@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.urls import path
 from . import views
 
@@ -6,7 +5,6 @@ from . import views
 app_name = 'birthday_app'
 
 urlpatterns = [
-     
     path('', views.home_page, name='home'),
     path('upload-video/', views.upload_video, name='upload_video'),
     path('video-gallery/', views.video_gallery, name='video_gallery'),
